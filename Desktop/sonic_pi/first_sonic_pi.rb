@@ -1,3 +1,5 @@
+#first_sonic_pi
+
 live_loop :alien do
   sample :ambi_drone, release: 1, amp: 1
   sleep 2
@@ -16,10 +18,11 @@ live_loop :chord do
     sleep 0.25
   end
   32.times do
-    play choose(chord(:D3, :m7)), release: 0.3, cutoff: rrand(40, 100)
+    play choose(chord(:D3, :m7)), release: 0.3, cutoff: rrand(60, 120)
     sleep 0.25
   end
 end
+
 
 
 

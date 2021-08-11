@@ -11,6 +11,17 @@ live_loop :space_drum do
   sleep 0.5
 end
 
+live_loop :swoosh do
+  sample :elec_filt_snare
+  sleep 8
+end
+
+live_loop :sub_pulse do
+  use_synth :subpulse
+  play choose(chord(:D3, :m6)), release: 0.1, cutoff: rrand(65,130), pan: (range -1, 1, step: 0.125).tick
+  sleep 0.25
+end
+
 live_loop :chord do
   use_synth :tb303
   32.times do
